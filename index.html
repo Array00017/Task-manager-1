@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📝 Task Manager</h1>
+            <p>Organize your tasks efficiently</p>
+        </div>
+
+        <div class="add-task-section">
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    id="taskInput" 
+                    placeholder="Enter a new task..."
+                    onkeypress="handleKeyPress(event)"
+                >
+                <select id="prioritySelect">
+                    <option value="low">Low Priority</option>
+                    <option value="medium" selected>Medium Priority</option>
+                    <option value="high">High Priority</option>
+                </select>
+                <button class="btn btn-primary" onclick="addTask()">
+                    ➕ Add Task
+                </button>
+            </div>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" onclick="setFilter('all')" id="filter-all">
+                All (<span id="count-all">0</span>)
+            </button>
+            <button class="filter-btn" onclick="setFilter('active')" id="filter-active">
+                Active (<span id="count-active">0</span>)
+            </button>
+            <button class="filter-btn" onclick="setFilter('completed')" id="filter-completed">
+                Completed (<span id="count-completed">0</span>)
+            </button>
+        </div>
+
+        <div class="task-list" id="taskList"></div>
+    </div>
+
+    <div class="stats" id="stats"></div>
+    <script src="script.js"></script> 
+
+</body>
+</html>
