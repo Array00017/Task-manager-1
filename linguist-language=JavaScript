@@ -1,1 +1,3 @@
-        *.gs linguist-language=JavaScript
+function recognizeScript(){
+console.log("script")
+}       *.gs linguist-language=JavaScript
