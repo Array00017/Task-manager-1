@@ -1,3 +1,2 @@
-
-src/** linguist-language=JavaScript
+.gitattributes = src/** linguist-language=JavaScript
 
